@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shared Notes | UoB CS Volunteering</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="../CSS/notes.css">
+  <!-- JS -->
+
+  <script defer src="../JS/script.js"></script>
+  <!-- <script defer src="/js/script.js"></script> -->
+
+  <!-- Imported JS -->
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+
+<body data-theme="light">
+
+  <header>
+    <div class="brand">
+      <!-- <img src="" alt=""> -->
+      <h1>UoB — Computer Science Volunteering</h1>
+      <span>⭐Bookmark this site!</span>
+    </div>
+    <nav>
+      <a href="../index.html">Home</a>
+
+      <a href="contact.html">Contact — Credits</a>
+
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero card">
+      <h2>Notes Library</h2>
+      <p>Lecture notes, books, and study guides. Files are hosted on Google Drive and listed below for easy
+        access.</p>
+    </section>
+
+    <div class="layout">
+      <div class="left">
+        <div class="card">
+          <!-- <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <strong>Upload Notes</strong>
+              <div class="fmeta">Accepted: PDF, PPTX, DOCX. Max 50 MB</div>
+            </div>
+          </div> -->
+
+          <!-- <form id="uploadForm" class="upload-area" style="margin-top:12px">
+            <div class="file-input">
+              <input type="file" name="file" id="fileInput" accept=".pdf,.pptx,.docx,.doc" required />
+            </div>
+            <input type="text" id="contributor" placeholder="Your name (optional)"
+              style="padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)" />
+            <button class="btn" type="submit">Upload</button>
+            <button class="btn ghost" type="button" id="refreshBtn">Refresh</button>
+          </form>
+        </div> -->
+
+          <aside class="sidebar">
+            <div class="card">
+              <!-- <strong>Filters</strong>
+              <div class="tags" style="margin-top:10px">
+                <button class="tag" data-filter="">All</button>
+                <button class="tag" data-filter="cs101">CS101</button>
+                <button class="tag" data-filter="algorithms">Algorithms</button>
+                <button class="tag" data-filter="databases">Databases</button>
+                <button class="tag" data-filter="os">OS</button>
+              </div> -->
+            </div>
+
+            <div class="card">
+              <strong>Available Notes</strong>
+              <div class="fmeta" style="margin-top:6px">Click View to open stored file on Google Drive</div>
+
+              <!-- <div style="display:flex;gap:8px;align-items:center">
+                <input type="text" id="search" class="search" placeholder="Search by filename"
+                  aria-label="Search notes" />
+              </div> -->
+
+              <div id="files" style="margin-top:12px">
+                <!-- File rows injected here -->
+                <div class="files-list">
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1h-ZegxgP00q5MNZnCYG3SdFmiBcDVyrf?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>
+                    Applied Physics
+                  </a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1Zco0Vp1PGnX-vJNHrfwlKikl26HshOPJ?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Calculus & Analytical Geometry</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1qEEdCXLh37-1wMYKdBmAi8Fc6ZUgjiZX?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>English Composition & Comprehension</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1RYsN3fWhjOwa6sdCr-CESoFy1F0J4Idf?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Introduction to ICT</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1PgjYi1WP-j5y8iUoxJZ7LxXxXmo0Dqqo?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Programming Fundamentals</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1a-b2ODFA3R9Z11Za8jybT5D07rjoeEgl?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Communication & Presentation Skills</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1pFXI5paEC8lEUrL2AqohSISmMwcwX4rr?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Digital Logic Design</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1pZG-b0Adoj7CtPLw8Y5G5VbgPlHcO5fK?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Discrete Structures</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1c7-9MVT3A6_dNLdycSo27FTctUaXHszK?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Financial Accounting</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1awK64koC4l1MihVHXEhqtSLeag-1rFgH?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Probability & Statistics</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1nhkgd7b4nnEJEKHBUQiVtKg0SOZ78MQC?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Computer Organization & Assembly Language</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1SOa0_bVUdBc-fSrZ6bh2C0Gijuq4djlr?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Data Structures & Algorithms</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1tn1Pp4WSB9zkDUG478Z__dZnr0zh6RYC?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Multivariable Calculus</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1tSh31WIf1f0SFgx_vAvrA-DsorKbCHs1?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Object Oriented Programming</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1YAWc9P4o3aAkxzfnwmM9GD-g_5tTiaIu?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Professional Practices</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1Mpr2v-xlYGxc6ftVtpVMoZMvGisNuNI3?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Database Systems</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1id6nz7leWrVlOQE_iadxFEh69wBdkvFy?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Design & Analysis of Algorithms</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1b0pXgi1YH8W1zoyaasBvf2rcjjAAgu0t?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Economics</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1JesRpbZIl06n1tdTf3RB9jFkfs_kCaAW?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Linear Algebra</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1-jdwjSpt_sMGMRRr-Uvh_hVKjxRyO_DA?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Theory of Automata</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1Qkr-jpJq9NmkODPkgUwN7O4IcrJ5ctF6?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Cloud Computing</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/18D3Wl6V5LLxBqHex20_mLs4vwY03OGdo?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Compiler Construction</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1UcS4wqCgjNQmtalmW6p8HY6RUv3ic7JD?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Operating Systems</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/104jPbxxT-iU2lx1qeDRhzh2MpT2PlEMT?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Software Engineering</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1tVjpTDqkcfjaHqc5ZXtZEojm0sFqKUyL?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Theory of Programming</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1tlNJ0Z5G5EFLQAGEjIi1NlwZv_5MJmr0?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Artificial Intelligence</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1mp8hh5BN-HREqe5U-VeRVCHGmPZB-0VU?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Computer Networks</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1kqUABXODJpMflagTbAR-42yUPgrFaYA8?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Graph Theory</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1XaS5lVVSbOOffsHzC3lE3WOv2f5NHboy?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Human Computer Interaction</a>
+
+                  <a class="icons" target="_blank"
+                    href="https://drive.google.com/drive/folders/1VZcNGDQvnAHznEJEsXD6HDY-qCfZbO4H?usp=drive_link">
+                    <ion-icon name="document-text"></ion-icon>Technical & Business Writing</a>
+
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!-- <div class="card" style="margin-top:12px">
+        <strong>Ad space</strong>
+        <div class="ad-box" style="margin-top:8px">Ad Placeholder</div>
+      </div> -->
+        <div class="card" style="margin-top:12px">
+          <strong>Contribute</strong>
+          <p class="fmeta" style="margin:6px 0">Spread first contact <a href="mailto:">umairamjad291@gmail.com</a>
+          </p>
+        </div>
+        <!-- </aside> -->
+      </div>
+  </main>
+  <footer>
+    &copy; 2025 University of Balochistan — CS Department Volunteering
+    <span id="ver">alpha version: 0.0.0</span>
+  </footer>
+</body>
+
+</html>
