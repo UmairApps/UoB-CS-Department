@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
@@ -18,43 +20,50 @@
 
 body {
   margin: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Share Tech', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  /* transition: background 0.3s, color 0.3s; */
+  transition: background-color 0.3s ease, color 0.3s ease;
   cursor: default;
 }
 
 header {
   background-color: var(--header-bg);
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 120px;
 }
 
 header img {
-  height: 50px;
-  position: relative;
-  top: 2rem;
+  height: 80px;
+  margin-right: 1rem;
 }
 
 .logo {
   display: flex;
-  flex-direction: column;
-  align-items: start;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+  text-align: left;
+  gap: 0.5rem;
+  order: 1;
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: var(--accent-color);
 }
 
-/* header > h1, strong {
-  position: relative;
-  left: 2rem;
-  bottom: 2rem;
-} */
+nav {
+  display: flex;
+  align-items: center;
+  order: 2;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
 
 nav a {
   color: var(--text-color);
@@ -77,13 +86,21 @@ nav a:hover {
 }
 
 .hero {
+  margin-top: 2rem;
   padding: 4rem 2rem;
   text-align: center;
   background-color: var(--card-bg);
 }
 
 .hero h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.quick-links h3,
+.events h3 {
+  font-size: 1.6rem;
+  color: var(--accent-color);
   margin-bottom: 1rem;
 }
 
@@ -148,6 +165,17 @@ nav a:hover {
   padding: 1rem;
   border-radius: 5px;
   flex: 1 1 200px;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.link-card:hover,
+.link-card:active {
+  background-color: var(--accent-color);
+  transition: all 0.3s ease;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 footer {
@@ -162,4 +190,43 @@ footer {
   position: relative;
   bottom: 2rem;
   color: var(--text-color);
+}
+
+/* Discord Chat Bubble */
+.discord-bubble {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background-color: #5865f2;
+  color: var(--bg-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(88, 101, 242, 0.4);
+  transition: all 0.3s ease;
+  z-index: 999;
+  font-size: 1.8rem;
+}
+
+.discord-bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6);
+}
+
+.discord-bubble:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .discord-bubble {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
 }
