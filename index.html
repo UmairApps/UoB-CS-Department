@@ -3,19 +3,30 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HLD5ZZYKP1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-HLD5ZZYKP1');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HLD5ZZYKP1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-HLD5ZZYKP1');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 
   <title>UoB CS Volunteering</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="Favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="Favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="Favicon/android-chrome-512x512.png">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- CSS -->
 
@@ -30,20 +41,23 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-  
+
+
 <body data-theme="light">
 
   <header>
-    <div class="logo">
-      <!-- <img src="/IMG/R.png" alt="404 — Logo Not Found" /> -->
-      <h1>UoB — Computer Science Volunteering</h1>
-      <strong>⭐Bookmark this site!</strong>
-    </div>
     <nav>
       <a href="HTML/notes.html">Notes</a>
       <a href="HTML/contact.html">Contact — Credits</a>
       <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
     </nav>
+    <a class="logo" href="#">
+      <img src="IMG/icon_trans.png" alt="404!" />
+      <div>
+        <h1>UoB — Computer Science Volunteering</h1>
+        <strong>⭐Bookmark this site!</strong>
+      </div>
+    </a>
   </header>
 
   <!-- <section class="ads">
@@ -56,31 +70,27 @@
     <a href="HTML/notes.html"><button>See Notes</button></a>
   </section>
 
-  <!-- <section class="ads">
-    <div class="ad-box">Ad Placeholder</div>
-  </section> -->
-
   <section class="quick-links">
     <h3>Quick Links</h3>
     <div class="link-grid">
-      <div class="link-card">
-        <strong>Shared Notes</strong>
-        <p>Access and upload study materials via Google Drive.</p>
-      </div>
-      <div class="link-card">
+      <a href="https://dims.uob.edu.pk/uob_dims" target="_blank" class="link-card">
+        <strong>Your Records</strong>
+        <p>See Your Academic Records.</p>
+      </a>
+      <a href="https://www.uob.ac.pk/challan/computerscience/depositer_form.php" target="_blank" class="link-card ">
+        <strong>Fee Challan</strong>
+        <p>Generate and print your fee payment voucher.</p>
+      </a>
+      <a href="HTML/announcement.html" class="link-card">
         <strong>Announcements</strong>
-        <p>Stay updated with important news and deadlines.</p>
-      </div>
-      <div class="link-card">
-        <strong>Volunteers</strong>
-        <p>Meet our dedicated team and join the mission.</p>
-      </div>
+        <p>News and Updates.</p>
+      </a>
+      <a href="HTML/teacher-catalogue.html" class="link-card">
+        <strong>Professor's Catalogue</strong>
+        <p>Discover our faculty members and their expertise.</p>
+      </a>
     </div>
   </section>
-
-  <!-- <section class="ads">
-    <div class="ad-box">Ad Placeholder</div>
-  </section> -->
 
   <section class="events">
     <h3>Upcoming Events</h3>
@@ -97,10 +107,15 @@
   </section>
 
   <footer>
-    &copy; 2025 University of Balochistan — CS Department Volunteering
-    <span id="ver">alpha version: 0.0.0</span>
+    © 2026 @UmairApps — CS Department Volunteering
+    <span id="ver">Beta Version</span>
   </footer>
-</body>
 
+  <!-- Discord Chat Bubble -->
+  <div id="discord-bubble" class="discord-bubble" title="Chat me on Discord">
+    <ion-icon name="logo-discord"></ion-icon>
+  </div>
+
+</body>
 
 </html>
