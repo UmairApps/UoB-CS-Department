@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
 :root {
     --bg-color: #ffffff;
     --text-color: #000000;
@@ -18,7 +20,7 @@
 
 body {
     margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Share Tech', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     cursor: default;
@@ -26,15 +28,27 @@ body {
 
 header {
     background: var(--header-bg);
-    padding: 14px 20px;
+    padding: 0.5rem 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 120px;
 }
 
-.brand {
+.logo {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: left;
+    gap: 0.5rem;
+    order: 1;
+}
+
+.logo>img {
+    height: 80px;
+    margin-right: 0.5rem;
 }
 
 h1 {
@@ -53,6 +67,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 12px;
+    order: 2;
 }
 
 nav a {
@@ -101,9 +116,6 @@ main {
 }
 
 .layout {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 18px;
     margin-top: 18px
 }
 
@@ -169,6 +181,7 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
 }
 
 .icons {
@@ -278,6 +291,45 @@ footer {
 #ver {
     color: var(--text-color);
     font-weight: lighter;
+}
+
+/* Discord Chat Bubble */
+.discord-bubble {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: #5865f2;
+    color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(88, 101, 242, 0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+    font-size: 1.8rem;
+}
+
+.discord-bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6);
+}
+
+.discord-bubble:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .discord-bubble {
+        bottom: 1rem;
+        right: 1rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
 }
 
 @media only screen and (max-width:700px) {
