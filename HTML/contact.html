@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google tag (gtag.js) -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HLD5ZZYKP1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HLD5ZZYKP1');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Contact — Credits | UoB CS Volunteering</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/Favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/Favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/Favicon/android-chrome-512x512.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/contact.css">
+
+    <!-- JS -->
+    <script defer src="../JS/script.js"></script>
+
+    <!-- Imported JS -->
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
-<body>
-    Contact Page
+
+<body data-theme="light">
+    <header>
+        <nav>
+            <a href="notes.html">Notes</a>
+            <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </nav>
+        <a class="logo" href="../index.html">
+            <img src="../IMG/icon_trans.png" alt="404!" />
+            <div>
+                <h1>UoB — Computer Science Volunteering</h1>
+                <strong>⭐Bookmark this site!</strong>
+            </div>
+        </a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Contact & Credits</h2>
+            <p>Get in touch and meet the team behind this volunteering initiative.</p>
+            <p>Email me on:
+                <a href="mailto:umairamjad291@gmail.com">umairamjad291@gmail.com</a>
+            </p>
+            <span class="credit">Or Message us on Discord</span>
+            <button id="discord-button" class="contact-button"><ion-icon name="logo-discord"></ion-icon> Chat on
+                Discord</button>
+            <div class="credit">Developed by <a href="https://github.com/UmairApps" target="_blank">@UmairApps</a>
+            </div>
+        </section>
+
+        <section class="about">
+            <h3>About This Project</h3>
+            <p>This volunteering site connects University of Balochistan Computer Science students with local outreach
+                opportunities. It was created to share resources, manage events, and provide a friendly way to get
+                involved. This project aims to foster a sense of community and support among students and faculty. </p>
+            <p class="small">Built and maintained by a student team. Contact the email above for contributions or questions.</p>
+            <p class="small">This project created on 28th October 2025.</p>
+        </section>
+    </main>
+
+    <footer>
+        © 2026 @UmairApps — CS Department Volunteering
+        <span id="ver">Beta Version</span>
+    </footer>
+
+    <!-- Discord Chat Bubble -->
+    <div id="discord-bubble" class="discord-bubble" title="Join our Discord server"><ion-icon
+            name="logo-discord"></ion-icon></div>
 </body>
+
 </html>
