@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HLD5ZZYKP1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-HLD5ZZYKP1');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Catalogue - UoB CS</title>
+
+  <!-- Favicon -->
+
+  <link rel="icon" type="image/x-icon" href="/Favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Favicon/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/Favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/Favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/Favicon/android-chrome-512x512.png">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="../CSS/teacher-catalogue.css">
+
+  <!-- JS -->
+
+  <script defer src="../JS/script.js"></script>
+  <script defer src="../JS/teacher-catalogue.js"></script>
+
+  <!-- Imported JS -->
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body data-theme="light">
+
+  <header>
+    <nav>
+      <a href="../HTML/notes.html">Notes</a>
+      <a href="../HTML/contact.html">Contact</a>
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+    <a class="logo" href="../index.html">
+      <img src="../IMG/icon_trans.png" alt="Logo" />
+      <div>
+        <h1>UoB — Computer Science Volunteering</h1>
+        <strong>⭐Bookmark this site!</strong>
+      </div>
+    </a>
+  </header>
+
+  <section class="hero">
+    <h2>Teacher Catalogue</h2>
+    <p>Meet our dedicated faculty members and access their course materials</p>
+  </section>
+
+  <section class="catalogue">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search teachers..." class="search-box">
+      <ion-icon name="search" class="search-icon"></ion-icon>
+    </div>
+
+    <div class="teachers-grid" id="teachersGrid">
+      <!-- Teachers will be populated here by JavaScript -->
+    </div>
+  </section>
+
+  <footer>
+    © 2026 @UmairApps — CS Department Volunteering
+    <span id="ver">Beta Version</span>
+  </footer>
+
+  <!-- Discord Chat Bubble -->
+  <div id="discord-bubble" class="discord-bubble" title="Chat me on Discord">
+    <ion-icon name="logo-discord"></ion-icon>
+  </div>
+
+</body>
+
+</html>
