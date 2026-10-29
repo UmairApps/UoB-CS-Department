@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+@font-face {
+    font-family: 'Jameel Noori';
+    src: url('../../FONTS/JameelNooriNastaleeq.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #00bcd4;
+    --card-bg: #f0f0f0;
+    --header-bg: #e0e0e0;
+    --footer-bg: #cccccc;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --accent-color: #00bcd4;
+    --card-bg: #1e1e1e;
+    --header-bg: #1f1f1f;
+    --footer-bg: #1f1f1f;
+}
+
+body {
+    margin: 0;
+    font-family: Jameel Noori;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    cursor: default;
+    text-align: right;
+}
+
+header {
+    background: var(--header-bg);
+    padding: 0.5rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 130px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: right;
+    gap: 0.5rem;
+    order: 1;
+    margin-left: auto;
+}
+
+.logo>img {
+    height: 80px;
+    margin-right: 0.5rem;
+}
+
+h1 {
+    margin: 0;
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+span {
+    display: block;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    order: 2;
+    width: 100%;
+}
+
+nav a {
+    margin-left: 12px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+.theme-toggle {
+    background: var(--accent-color);
+    border: none;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 700
+}
+
+main {
+    max-width: 1100px;
+    margin: 22px auto;
+    padding: 0 18px
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 18px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hero h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.hero p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.4rem;
+}
+
+.layout {
+    margin-top: 18px;
+}
+
+@media (max-width:880px) {
+    .layout {
+        grid-template-columns: 1fr;
+        padding-bottom: 18px;
+    }
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 1.4rem;
+}
+
+.card>strong {
+    font-size: 1.8rem;
+}
+
+.upload-area {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.file-input {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn {
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.btn.ghost {
+    background: transparent;
+    color: var(--accent-color);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.search {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    background: transparent;
+    color: var(--text-color);
+    text-align: right;
+    font-family: Jameel Noori;
+    font-size: 1.4rem;
+}
+
+.files-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.icons {
+    border: 2px dashed var(--accent-color);
+    border-radius: 5px;
+    text-align: center;
+    width: 20%;
+    padding: 20px 10px;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-family: 'Share Tech', sans-serif;
+    font-size: 1.1rem;
+}
+
+ion-icon {
+    display: block;
+    margin: auto;
+    color: var(--accent-color);
+    font-size: 2rem;
+}
+
+.icons:hover {
+    border: 2px solid var(--accent-color);
+    background-color: var(--bg-color);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.icons:active {
+    border: 2px solid var(--accent-color);
+    background-color: var(--bg-color);
+}
+
+.file-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+}
+
+.file-meta {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.file-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--accent-color), #0aa0c0);
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.fmeta {
+    color: var(--text-color);
+}
+
+.fmeta a {
+    color: var(--text-color);
+}
+
+.fmeta a:hover {
+    color: var(--accent-color);
+}
+
+/* .actions a {
+    margin-left: 8px;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 700
+} */
+
+.sidebar .ad-box {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.tag {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 6px 8px;
+    border-radius: 999px;
+    font-size: .85rem;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--card-bg);
+    text-align: center;
+    padding: 18px 0;
+    color: var(--muted);
+    font-family: 'Share Tech', sans-serif;
+}
+
+#ver {
+    color: var(--text-color);
+    font-weight: lighter;
+}
+
+/* Discord Chat Bubble */
+.discord-bubble {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background-color: #5865f2;
+    color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(88, 101, 242, 0.4);
+    transition: all 0.3s ease;
+    z-index: 999;
+    font-size: 1.8rem;
+}
+
+.discord-bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6);
+}
+
+.discord-bubble:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    .discord-bubble {
+        bottom: 1rem;
+        right: 1rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .icons {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .icons {
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 856px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .logo>img {
+        height: 50px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+}
