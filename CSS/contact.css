@@ -218,3 +218,15 @@ footer {
     color: var(--bg-color);
     cursor: pointer;
 }
+
+@media only screen and (max-width: 612px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 492px) {
+  h1 {
+    font-size: 0.9rem;
+  }
+}
