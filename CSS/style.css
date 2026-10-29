@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 
+@font-face {
+  font-family: 'Jameel Noori';
+  src: url('../../FONTS/JameelNooriNastaleeq.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
@@ -70,6 +77,12 @@ nav a {
   margin-left: 1rem;
   text-decoration: none;
   font-weight: bold;
+}
+
+nav a:nth-child(1) {
+  font-family: 'Jameel Noori', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 6px;
 }
 
 nav a:hover {
@@ -228,5 +241,17 @@ footer {
     width: 50px;
     height: 50px;
     font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 612px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 492px) {
+  h1 {
+    font-size: 0.9rem;
   }
 }
